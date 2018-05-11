@@ -24,7 +24,8 @@ def auth_cognito(profile, pool_id, client_id, username, password):
         # 認証完了
         return aws_result
 
-    except:
+    except Exception as e:
+        print(e)
         return None
 
 
